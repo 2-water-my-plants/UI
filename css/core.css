@@ -191,14 +191,27 @@ nav .desktop {
   justify-content: center;
   color: #004d1a;
 }
-.main header .desktop {
+.main header .heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2em;
+}
+.main header .heading .desktop {
   display: none;
 }
-.main header h1 {
+.main header .heading h1 {
   text-align: center;
   font-size: 2em;
   color: #000;
   font-weight: bold;
+}
+.main header .heading h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #004d1a;
+  padding: 0.5em;
 }
 .main header img {
   width: 15rem;
@@ -211,10 +224,29 @@ nav .desktop {
   justify-content: center;
   padding: 0.5em;
 }
+.main .content h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #009933;
+  padding: 0.5em;
+}
 .main .content p {
   text-align: center;
   font-size: 1.2em;
   color: #004d1a;
+}
+.main .content .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+}
+.main .content .text p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #004d1a;
+  padding: 0.2em 1em 1em 1em;
 }
 .main footer {
   display: flex;
@@ -235,8 +267,11 @@ nav .desktop {
   .main {
     top: 80px;
   }
-  .main header h1 {
+  .main header .heading h1 {
     font-size: 3em;
+  }
+  .main header .heading h2 {
+    font-size: 1.6em;
   }
   .main header img {
     width: 20rem;
@@ -244,38 +279,83 @@ nav .desktop {
   .main .content {
     padding: 1em;
   }
-  .main .content p {
+  .main .content .text p {
     font-size: 1.5em;
   }
 }
 @media only screen and (min-width: 730px) {
   .main {
-    top: 150px;
+    top: 130px;
   }
   .main header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
-  .main header h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-self: flex-start;
+  .main header .heading {
+    width: 25rem;
+  }
+  .main header .heading h1 {
     margin-top: 1em;
   }
-  .main header .desktop {
+  .main header .heading h2 {
+    font-size: 1.8em;
+  }
+  .main header .heading .desktop {
     display: block;
-    width: 15rem;
+    width: 10rem;
+  }
+  .main header img {
+    width: 18rem;
+  }
+  .main .content .text p {
+    padding: 0.2em 1em 1.5em 1em;
   }
 }
 @media only screen and (min-width: 930px) {
+  .main {
+    top: 125px;
+  }
+  .main header .heading {
+    width: 35rem;
+  }
+  .main header .heading h1 {
+    font-size: 4em;
+  }
+  .main header .heading .desktop {
+    width: 15rem;
+  }
+  .main .content .text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .main .content .text p {
+    padding: 0.2em 1.5em 1.5em 1.5em;
+  }
   .main footer {
     line-height: 1.5;
   }
 }
 @media only screen and (min-width: 1175px) {
+  .main {
+    top: 100px;
+  }
+  .main header .heading {
+    width: 45rem;
+  }
+  .main header .heading h1 {
+    font-size: 4.5em;
+  }
+  .main header .heading h2 {
+    font-size: 2.5em;
+  }
+  .main header .heading .desktop {
+    width: 20rem;
+  }
+  .main header img {
+    width: 25rem;
+  }
   .main footer {
     display: flex;
     flex-direction: row;
