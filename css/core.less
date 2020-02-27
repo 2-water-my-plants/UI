@@ -56,9 +56,10 @@ table {
     flex-direction: column;
     align-items: center;
 	justify-content: center;}
-.text(@align, @size) {
+.text(@align, @size, @color) {
 	text-align: @align;
-	font-size: @size;}	
+    font-size: @size;
+    color: @color;}	
 
 
 // Variables
@@ -86,9 +87,9 @@ nav {.flexrow();
     margin: .3em;
     border-bottom: @border;
     background-color: @navbg;
+    z-index: 10;
 
-    a {.text(center, 1.2em);
-        color: @navfont;
+    a {.text(center, 1.2em, @navfont);
         padding: .8em;
         text-decoration: none;}
 
@@ -114,30 +115,90 @@ nav {.flexrow();
     }
 }
 
-@media @930 {}
-
-@media @1175 {}
 
 // Main Content
-.main {display: none;
+.main {.flexcolumn();
+    position: relative;
+    top: 60px;
 
-    header {
+    header {.flexcolumn();
+        color: @mainfont;
 
+        .desktop {display: none;}
+
+        h1 {.text(center, 2em, @mainfont);
+            font-weight: bold;}
+
+        img {width: 15rem;
+            margin: 1em;}
     }
     
-    .content {
+    .content {.flexcolumn();
+        padding: .5em;
 
+        p {.text(center, 1.2em, @mainfont);}
     }
 
-    footer {
+    footer {.flexcolumn();
+        position: relative;
+        top: 60px;
+        border-top: @border;
+        border-bottom: @border;
+        width: 100%;
+        background-color: @pink1;
+        .text(center, 1.2em, @navfont);
 
     }
 }
 
-@media @400 {}
+@media @400 {
+    .main {top: 80px;
 
-@media @730 {}
+        header {
 
-@media @930 {}
+            h1 {font-size: 3em;}
 
-@media @1175 {}
+            img {width: 20rem;}
+        }
+
+        .content {padding: 1em;
+        
+            p {font-size: 1.5em;}
+        }
+    }
+}
+
+@media @730 {
+    .main {top: 150px;
+    
+        header {.flexrow();
+            justify-content: space-around;
+        
+            h1 {.flexcolumn();
+                align-self: flex-start;
+                margin-top: 1em;}
+
+            .desktop {display: block;
+                width: 15rem;}
+        }
+    }
+}
+
+@media @930 {
+    .main {
+
+        footer {line-height: 1.5;
+        }
+    }
+}
+
+@media @1175 {
+    .main {
+
+        footer {.flexrow();
+            justify-content: space-around;
+        
+            p {padding: 1em;}
+        }
+    }
+}
