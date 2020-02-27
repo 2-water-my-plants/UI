@@ -130,7 +130,7 @@ table {
   margin: auto;
 }
 body {
-  background-color: white;
+  background-color: #fff;
 }
 nav {
   display: flex;
@@ -139,19 +139,19 @@ nav {
   position: fixed;
   width: 100%;
   margin: 0.3em;
-  border-bottom: 3px double green;
-  background-color: lightgrey;
+  border-bottom: 3px double #009933;
+  background-color: #e6e6e6;
   z-index: 10;
 }
 nav a {
   text-align: center;
   font-size: 1.2em;
-  color: black;
+  color: #cc0066;
   padding: 0.8em;
   text-decoration: none;
 }
 nav .active {
-  background-color: pink;
+  background-color: #ffc0cb;
 }
 nav .desktop {
   display: none;
@@ -189,7 +189,7 @@ nav .desktop {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: darkgrey;
+  color: #004d1a;
 }
 .main header .desktop {
   display: none;
@@ -197,7 +197,7 @@ nav .desktop {
 .main header h1 {
   text-align: center;
   font-size: 2em;
-  color: darkgrey;
+  color: #000;
   font-weight: bold;
 }
 .main header img {
@@ -214,7 +214,7 @@ nav .desktop {
 .main .content p {
   text-align: center;
   font-size: 1.2em;
-  color: darkgrey;
+  color: #004d1a;
 }
 .main footer {
   display: flex;
@@ -223,13 +223,13 @@ nav .desktop {
   justify-content: center;
   position: relative;
   top: 60px;
-  border-top: 3px double green;
-  border-bottom: 3px double green;
+  border-top: 3px double #009933;
+  border-bottom: 3px double #009933;
   width: 100%;
-  background-color: pink;
+  background-color: #ffc0cb;
   text-align: center;
   font-size: 1.2em;
-  color: black;
+  color: #cc0066;
 }
 @media only screen and (min-width: 400px) {
   .main {
