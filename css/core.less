@@ -1,0 +1,204 @@
+// CSS Reset
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// Mixins
+.flexrow() {display: flex;
+    flex-direction: row;}
+.flexcolumn() {display: flex;
+    flex-direction: column;
+    align-items: center;
+	justify-content: center;}
+.text(@align, @size, @color) {
+	text-align: @align;
+    font-size: @size;
+    color: @color;}	
+
+
+// Variables
+@1175: ~"only screen and (min-width: 1175px)";
+@930: ~"only screen and (min-width: 930px)";
+@730: ~"only screen and (min-width: 730px)";
+@400: ~"only screen and (min-width: 400px)";
+@mainbg: white;
+@mainfont: darkgrey;
+@navbg: lightgrey;
+@navfont: black;
+@green1: green;
+@pink1: pink;
+@border: 3px double @green1;
+
+// Basics
+.center {margin: auto;}
+body {background-color: @mainbg;}
+
+// Navigation
+nav {.flexrow();
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    margin: .3em;
+    border-bottom: @border;
+    background-color: @navbg;
+    z-index: 10;
+
+    a {.text(center, 1.2em, @navfont);
+        padding: .8em;
+        text-decoration: none;}
+
+    .active {background-color: @pink1;}
+
+    .desktop {display: none;}
+}
+
+@media @400 {
+    nav {margin: .4em;
+    
+        a {padding: 1.2em;}
+    }
+}
+
+@media @730 {
+    nav {margin: .5em;
+        align-items: center;
+    
+        .desktop {display: block;}
+
+        img {width: 8rem;}
+    }
+}
+
+
+// Main Content
+.main {.flexcolumn();
+    position: relative;
+    top: 60px;
+
+    header {.flexcolumn();
+        color: @mainfont;
+
+        .desktop {display: none;}
+
+        h1 {.text(center, 2em, @mainfont);
+            font-weight: bold;}
+
+        img {width: 15rem;
+            margin: 1em;}
+    }
+    
+    .content {.flexcolumn();
+        padding: .5em;
+
+        p {.text(center, 1.2em, @mainfont);}
+    }
+
+    footer {.flexcolumn();
+        position: relative;
+        top: 60px;
+        border-top: @border;
+        border-bottom: @border;
+        width: 100%;
+        background-color: @pink1;
+        .text(center, 1.2em, @navfont);
+
+    }
+}
+
+@media @400 {
+    .main {top: 80px;
+
+        header {
+
+            h1 {font-size: 3em;}
+
+            img {width: 20rem;}
+        }
+
+        .content {padding: 1em;
+        
+            p {font-size: 1.5em;}
+        }
+    }
+}
+
+@media @730 {
+    .main {top: 150px;
+    
+        header {.flexrow();
+            justify-content: space-around;
+        
+            h1 {.flexcolumn();
+                align-self: flex-start;
+                margin-top: 1em;}
+
+            .desktop {display: block;
+                width: 15rem;}
+        }
+    }
+}
+
+@media @930 {
+    .main {
+
+        footer {line-height: 1.5;
+        }
+    }
+}
+
+@media @1175 {
+    .main {
+
+        footer {.flexrow();
+            justify-content: space-around;
+        
+            p {padding: 1em;}
+        }
+    }
+}
