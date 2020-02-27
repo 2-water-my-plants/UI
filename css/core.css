@@ -132,3 +132,49 @@ table {
 body {
   background-color: white;
 }
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: fixed;
+  width: 100%;
+  margin: 0.3em;
+  border-bottom: 3px double green;
+  background-color: lightgrey;
+}
+nav a {
+  text-align: center;
+  font-size: 1.2em;
+  color: black;
+  padding: 0.8em;
+  text-decoration: none;
+}
+nav .active {
+  background-color: pink;
+}
+nav .desktop {
+  display: none;
+}
+@media only screen and (min-width: 400px) {
+  nav {
+    margin: 0.4em;
+  }
+  nav a {
+    padding: 1.2em;
+  }
+}
+@media only screen and (min-width: 730px) {
+  nav {
+    margin: 0.5em;
+    align-items: center;
+  }
+  nav .desktop {
+    display: block;
+  }
+  nav img {
+    width: 8rem;
+  }
+}
+.main {
+  display: none;
+}
