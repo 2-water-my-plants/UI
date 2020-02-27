@@ -67,13 +67,14 @@ table {
 @930: ~"only screen and (min-width: 930px)";
 @730: ~"only screen and (min-width: 730px)";
 @400: ~"only screen and (min-width: 400px)";
-@mainbg: white;
-@mainfont: darkgrey;
-@navbg: lightgrey;
-@navfont: black;
-@green1: green;
-@pink1: pink;
-@border: 3px double @green1;
+@mainbg: #fff;
+@mainfont: #004d1a;
+@navbg: #e6e6e6;
+@navfont: #cc0066;
+@bordercolor: #009933;
+@titlefont: #000;
+@altbg: #ffc0cb;
+@border: 3px double @bordercolor;
 
 // Basics
 .center {margin: auto;}
@@ -93,7 +94,7 @@ nav {.flexrow();
         padding: .8em;
         text-decoration: none;}
 
-    .active {background-color: @pink1;}
+    .active {background-color: @altbg;}
 
     .desktop {display: none;}
 }
@@ -126,7 +127,7 @@ nav {.flexrow();
 
         .desktop {display: none;}
 
-        h1 {.text(center, 2em, @mainfont);
+        h1 {.text(center, 2em, @titlefont);
             font-weight: bold;}
 
         img {width: 15rem;
@@ -145,7 +146,7 @@ nav {.flexrow();
         border-top: @border;
         border-bottom: @border;
         width: 100%;
-        background-color: @pink1;
+        background-color: @altbg;
         .text(center, 1.2em, @navfont);
 
     }
