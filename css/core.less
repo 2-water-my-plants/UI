@@ -52,6 +52,8 @@ table {
 // Mixins
 .flexrow() {display: flex;
     flex-direction: row;}
+.flexaltrow() {display: flex;
+    flex-direction: row-reverse;}
 .flexcolumn() {display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,6 +157,39 @@ nav {.flexrow();
             p {.text(center, 1.2em, @mainfont);
                 padding: .2em 1em 1em 1em;}
         }
+
+        .team {.flexcolumn();
+
+            h1 {.text(center, 1.6em, @titlefont);
+                font-weight: bold;}
+        
+            .members {.flexcolumn();
+                padding: .5em;
+
+                .name {.flexcolumn();
+                
+                    h2 {.text(center, 1.5em, @mainfont);
+                        font-weight: bold;}
+    
+                    h3 {.text(center, 1.2em, @bordercolor);}
+                }
+
+                .person {.flexrow();
+                    .text(center, 1.2em, @mainfont);
+                    padding: .5em;
+                    justify-content: space-evenly;
+                
+                    img {border-radius: 40%;
+                        width: 7em;}
+
+                    a {.text(center, 1em, @mainfont);
+                        padding-left: .2em;
+                        text-decoration: none;
+                        justify-content: center;
+                        align-self: center;}
+                }
+            }
+        }
     }
 
     footer {.flexcolumn();
@@ -165,8 +200,8 @@ nav {.flexrow();
         width: 100%;
         background-color: @altbg;
         .text(center, 1.2em, @navfont);
-
-    }
+        padding: 1em 0;
+        margin-bottom: .2em;}
 }
 
 @media @400 {
@@ -189,6 +224,28 @@ nav {.flexrow();
             .text {
                 
                 p {font-size: 1.5em;}
+            }
+
+            .team {
+
+                h1 {font-size: 1.8em;}
+
+                .members {width: 20em;
+
+                    .name {
+
+                        h2 {font-size: 1.7em;}
+
+                        h3 {font-size: 1.4em;}
+                    }
+
+                    .person {font-size: 1.3em;
+                    
+                        img {width: 9em;}
+
+                        a {padding: .8em;}
+                    }                    
+                }
             }
         }
     }
@@ -219,6 +276,24 @@ nav {.flexrow();
 
                 p {padding: .2em 1em 1.5em 1em;}
             }
+
+            .team {
+
+                h1 {font-size: 2.2em;}
+
+                .members {width: 40em;
+                    
+                    .name {.flexrow();
+                        flex-wrap: wrap;}
+
+                    .person {padding: 1em;
+
+                        img {width: 15rem;}
+
+                        a {padding: 1em;}
+                    }
+                }
+            }
         }
     }
 }
@@ -243,10 +318,38 @@ nav {.flexrow();
 
                 p {padding: .2em 1.5em 1.5em 1.5em;}
             }
+
+            .team {
+
+                h1 {font-size: 2.6em;}
+
+                .members {.flexrow();
+                    flex-wrap: wrap;
+                    width: 55em;
+                
+                    .name {.flexcolumn();}
+
+                    .person {
+
+                        img {width: 20rem;}
+                    }
+                }
+
+                .altrow {.flexaltrow();
+                    flex-wrap: wrap;
+                    width: 55em;
+                
+                    .name {.flexcolumn();}
+
+                    .person {
+
+                        img {width: 20rem;}
+                    }
+                }
+            }
         }
 
-        footer {line-height: 1.5;
-        }
+        footer {line-height: 1.5;}
     }
 }
 
@@ -265,6 +368,18 @@ nav {.flexrow();
             }
 
             img {width: 25rem;}
+        }
+
+        .content {
+
+            .team {
+
+                h1 {font-size: 3.3em;}
+
+                .members {width: 70em;}
+
+                .altrow {width: 70em;}
+            }
         }
 
         footer {.flexrow();
