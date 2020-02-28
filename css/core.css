@@ -248,6 +248,66 @@ nav .desktop {
   color: #004d1a;
   padding: 0.2em 1em 1em 1em;
 }
+.main .content .team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px double #009933;
+}
+.main .content .team h1 {
+  text-align: center;
+  font-size: 1.6em;
+  color: #000;
+  font-weight: bold;
+}
+.main .content .team .members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  border: 3px double #009933;
+}
+.main .content .team .members .name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main .content .team .members .name h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #004d1a;
+  font-weight: bold;
+}
+.main .content .team .members .name h3 {
+  text-align: center;
+  font-size: 1.2em;
+  color: #009933;
+}
+.main .content .team .members .person {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 1.2em;
+  color: #004d1a;
+  padding: 0.5em;
+  justify-content: space-evenly;
+}
+.main .content .team .members .person img {
+  border-radius: 40%;
+  width: 7em;
+}
+.main .content .team .members .person a {
+  text-align: center;
+  font-size: 1em;
+  color: #004d1a;
+  padding-left: 0.2em;
+  text-decoration: none;
+  justify-content: center;
+  align-self: center;
+}
 .main footer {
   display: flex;
   flex-direction: column;
@@ -262,6 +322,8 @@ nav .desktop {
   text-align: center;
   font-size: 1.2em;
   color: #cc0066;
+  padding: 1em 0;
+  margin-bottom: 0.2em;
 }
 @media only screen and (min-width: 400px) {
   .main {
@@ -281,6 +343,27 @@ nav .desktop {
   }
   .main .content .text p {
     font-size: 1.5em;
+  }
+  .main .content .team h1 {
+    font-size: 1.8em;
+  }
+  .main .content .team .members {
+    width: 20em;
+  }
+  .main .content .team .members .name h2 {
+    font-size: 1.7em;
+  }
+  .main .content .team .members .name h3 {
+    font-size: 1.4em;
+  }
+  .main .content .team .members .person {
+    font-size: 1.3em;
+  }
+  .main .content .team .members .person img {
+    width: 9em;
+  }
+  .main .content .team .members .person a {
+    padding: 0.8em;
   }
 }
 @media only screen and (min-width: 730px) {
@@ -311,6 +394,26 @@ nav .desktop {
   .main .content .text p {
     padding: 0.2em 1em 1.5em 1em;
   }
+  .main .content .team h1 {
+    font-size: 2.2em;
+  }
+  .main .content .team .members {
+    width: 40em;
+  }
+  .main .content .team .members .name {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .main .content .team .members .person {
+    padding: 1em;
+  }
+  .main .content .team .members .person img {
+    width: 15rem;
+  }
+  .main .content .team .members .person a {
+    padding: 1em;
+  }
 }
 @media only screen and (min-width: 930px) {
   .main {
@@ -332,6 +435,39 @@ nav .desktop {
   }
   .main .content .text p {
     padding: 0.2em 1.5em 1.5em 1.5em;
+  }
+  .main .content .team h1 {
+    font-size: 2.6em;
+  }
+  .main .content .team .members {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 55em;
+  }
+  .main .content .team .members .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .content .team .members .person img {
+    width: 20rem;
+  }
+  .main .content .team .altrow {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    width: 55em;
+  }
+  .main .content .team .altrow .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main .content .team .altrow .person img {
+    width: 20rem;
   }
   .main footer {
     line-height: 1.5;
@@ -355,6 +491,12 @@ nav .desktop {
   }
   .main header img {
     width: 25rem;
+  }
+  .main .content .team h1 {
+    font-size: 3.6em;
+  }
+  .main .content .team .members {
+    width: 60em;
   }
   .main footer {
     display: flex;
