@@ -253,7 +253,6 @@ nav .desktop {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 3px double #009933;
 }
 .main .content .team h1 {
   text-align: center;
@@ -267,7 +266,6 @@ nav .desktop {
   align-items: center;
   justify-content: center;
   padding: 0.5em;
-  border: 3px double #009933;
 }
 .main .content .team .members .name {
   display: flex;
@@ -493,10 +491,13 @@ nav .desktop {
     width: 25rem;
   }
   .main .content .team h1 {
-    font-size: 3.6em;
+    font-size: 3.3em;
   }
   .main .content .team .members {
-    width: 60em;
+    width: 70em;
+  }
+  .main .content .team .altrow {
+    width: 70em;
   }
   .main footer {
     display: flex;
