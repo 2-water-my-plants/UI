@@ -137,6 +137,7 @@ nav {
   flex-direction: row;
   justify-content: space-evenly;
   position: fixed;
+  flex-wrap: wrap;
   width: 100%;
   margin: 0.3em;
   border-bottom: 3px double #009933;
@@ -166,14 +167,16 @@ nav .desktop {
 }
 @media only screen and (min-width: 730px) {
   nav {
-    margin: 0.5em;
     align-items: center;
+  }
+  nav a {
+    padding: 0.5em;
   }
   nav .desktop {
     display: block;
   }
   nav img {
-    width: 8rem;
+    width: 6rem;
   }
 }
 .main {
@@ -182,7 +185,7 @@ nav .desktop {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 60px;
+  top: 130px;
 }
 .main header {
   display: flex;
@@ -213,6 +216,12 @@ nav .desktop {
   color: #004d1a;
   padding: 0.5em;
 }
+.main header .heading p {
+  text-align: center;
+  font-size: 1em;
+  color: #004d1a;
+  padding-top: 1em;
+}
 .main header img {
   width: 15rem;
   margin: 1em;
@@ -223,6 +232,11 @@ nav .desktop {
   align-items: center;
   justify-content: center;
   padding: 0.5em;
+}
+.main .content h1 {
+  text-align: center;
+  font-size: 1.7em;
+  color: #004d1a;
 }
 .main .content h2 {
   text-align: center;
@@ -306,6 +320,38 @@ nav .desktop {
   justify-content: center;
   align-self: center;
 }
+.main .content .suggested {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main .content .suggested .plants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main .content .suggested .plants img {
+  width: 15em;
+  padding: 0.5em;
+}
+.main .content .suggested .plants .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: 1.2em;
+  color: #004d1a;
+  margin-bottom: 1em;
+}
+.main .content .suggested .plants .info h3 {
+  text-align: center;
+  font-size: 1.2em;
+  color: #004d1a;
+  font-weight: bold;
+}
 .main footer {
   display: flex;
   flex-direction: column;
@@ -325,7 +371,7 @@ nav .desktop {
 }
 @media only screen and (min-width: 400px) {
   .main {
-    top: 80px;
+    top: 210px;
   }
   .main header .heading h1 {
     font-size: 3em;
@@ -363,10 +409,13 @@ nav .desktop {
   .main .content .team .members .person a {
     padding: 0.8em;
   }
+  .main .content .suggested .plants img {
+    width: 20em;
+  }
 }
 @media only screen and (min-width: 730px) {
   .main {
-    top: 130px;
+    top: 90px;
   }
   .main header {
     display: flex;
@@ -410,6 +459,16 @@ nav .desktop {
     width: 15rem;
   }
   .main .content .team .members .person a {
+    padding: 1em;
+  }
+  .main .content .suggested {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .main .content .suggested .plants {
     padding: 1em;
   }
 }
@@ -467,13 +526,19 @@ nav .desktop {
   .main .content .team .altrow .person img {
     width: 20rem;
   }
+  .main .content .suggested {
+    margin: 0;
+  }
+  .main .content .suggested .plants {
+    padding: 0.5em;
+  }
   .main footer {
     line-height: 1.5;
   }
 }
 @media only screen and (min-width: 1175px) {
   .main {
-    top: 100px;
+    top: 80px;
   }
   .main header .heading {
     width: 45rem;
@@ -490,6 +555,10 @@ nav .desktop {
   .main header img {
     width: 25rem;
   }
+  .main .content h1 {
+    font-size: 3em;
+    padding: 0.5em;
+  }
   .main .content .team h1 {
     font-size: 3.3em;
   }
@@ -498,6 +567,9 @@ nav .desktop {
   }
   .main .content .team .altrow {
     width: 70em;
+  }
+  .main .content .suggested .plants {
+    padding: 2em;
   }
   .main footer {
     display: flex;
