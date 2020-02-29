@@ -10,6 +10,10 @@ JS in js folder (if any created)
 index.html will be built mobile first as this is a app based project
 
 
+about.html = links to team members portfolios
+suggestions.html = plants with picture and data
+examples.html = to contain screenshots of app
+
 Colors
 @mainbg: #fff;  - main background (white)
 @mainfont: #004d1a; - main font(dark green)
