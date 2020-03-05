@@ -354,7 +354,7 @@ nav .desktop {
 }
 .main footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -368,6 +368,22 @@ nav .desktop {
   color: #cc0066;
   padding: 1em 0;
   margin-bottom: 0.2em;
+}
+.main footer .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main footer .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 0;
+}
+.main footer .icon img {
+  width: 2em;
 }
 @media only screen and (min-width: 400px) {
   .main {
@@ -411,6 +427,9 @@ nav .desktop {
   }
   .main .content .suggested .plants img {
     width: 20em;
+  }
+  .main footer .icon img {
+    width: 4em;
   }
 }
 @media only screen and (min-width: 730px) {
@@ -470,6 +489,16 @@ nav .desktop {
   }
   .main .content .suggested .plants {
     padding: 1em;
+  }
+  .main footer {
+    display: flex;
+    flex-direction: row;
+  }
+  .main footer .text {
+    padding: 0 1em 0 0.5em;
+  }
+  .main footer .icon {
+    padding: 0 0.5em 0 1em;
   }
 }
 @media only screen and (min-width: 930px) {
@@ -534,6 +563,15 @@ nav .desktop {
   }
   .main footer {
     line-height: 1.5;
+  }
+  .main footer .text {
+    padding: 0 1.5em;
+  }
+  .main footer .icon {
+    padding: 0 1.5em;
+  }
+  .main footer .icon img {
+    width: 6em;
   }
 }
 @media only screen and (min-width: 1175px) {
